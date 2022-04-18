@@ -192,5 +192,5 @@ module "luanch_template" {
     name        = "just_a_name"
     image_id    = "${module.ami_from_instanc.instance_id}"
     vpc_security_group_ids  = ["${module.sg_group.id}"]
+    
 }
-

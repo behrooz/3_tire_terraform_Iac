@@ -1,6 +1,9 @@
 variable name{}
 variable image_id{}
-variable vpc_security_group_ids{ type = list}
+
+variable vpc_security_group_ids {
+  type = list  
+}
 
 resource "aws_launch_template" "autoscalling" {
   name = "${var.name}"
@@ -71,7 +74,7 @@ resource "aws_launch_template" "autoscalling" {
     availability_zone = "us-east-1"
   }
 
-  vpc_security_group_ids = ${var.vpc_security_group_ids}
+  vpc_security_group_ids = "${var.vpc_security_group_ids}"
 
   tag_specifications {
     resource_type = "instance"
