@@ -19,3 +19,23 @@ Most of the applications needs to have separate layers in their infrastructure, 
 
 ## Prerequisites
 you need to install terraform  check out this [link](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+
+### Running project
+If you know how terraform is working it is easy to understand this project 
+
+to run project you need to write these codes 
+
+```
+terraform init
+```
+just keep in you mind running this code may destroy your some resources on aws cloud so first do 
+```
+terraform plan
+```
+then review your changes the write 
+```
+terraform apply 
+```
+then write y and hit enter to create your 3 tire instastructre
+
+
